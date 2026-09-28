@@ -1,882 +1,609 @@
-/* =========================================================
-   RESET & BASE
-   ========================================================= */
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f5f7fa;
-    color: #1f2937;
-    line-height: 1.6;
-}
-
-
-/* =========================================================
-   MENU / NAVIGATION
-   ========================================================= */
-
-header {
-    background-color: #0f172a;
-    padding: 20px 60px;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 1000;
-}
-
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-nav h2 {
-    color: white;
-    font-size: 24px;
-}
-
-nav ul {
-    list-style: none;
-    display: flex;
-    gap: 30px;
-}
-
-nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-size: 16px;
-    transition: 0.3s;
-}
-
-nav ul li a:hover {
-    color: #38bdf8;
-}
-
-
-/* =========================================================
-   SECTIONS
-   ========================================================= */
-
-section {
-    min-height: 100vh;
-    padding: 120px 10%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-section h2 {
-    font-size: 40px;
-    margin-bottom: 30px;
-    color: #0f172a;
-}
-
-.section-subtitle {
-    color: #2563eb;
-    font-weight: bold;
-    letter-spacing: 2px;
-    font-size: 14px;
-    margin-bottom: 10px;
-}
-
-
-/* =========================================================
-   ACCUEIL
-   ========================================================= */
-
-#accueil {
-    background: linear-gradient(
-        135deg,
-        #0f172a,
-        #1e3a8a
-    );
-    color: white;
-    text-align: center;
-}
-
-#accueil h1 {
-    font-size: 55px;
-    margin-bottom: 20px;
-}
-
-#accueil h2 {
-    font-size: 28px;
-    color: #38bdf8;
-    margin-bottom: 20px;
-}
-
-#accueil p {
-    font-size: 20px;
-}
-
-.intro {
-    font-size: 20px;
-    margin-bottom: 10px;
-    color: #cbd5e1;
-}
-
-.description {
-    max-width: 650px;
-    margin: 0 auto 30px;
-    font-size: 18px;
-    color: #e2e8f0;
-}
-
-
-/* =========================================================
-   BOUTONS
-   ========================================================= */
-
-.buttons {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    margin-top: 20px;
-}
-
-.btn {
-    display: inline-block;
-    padding: 14px 28px;
-    background-color: #38bdf8;
-    color: #0f172a;
-    text-decoration: none;
-    border-radius: 8px;
-    font-weight: bold;
-    transition: 0.3s;
-}
-
-.btn:hover {
-    transform: translateY(-3px);
-}
-
-.btn-outline {
-    background-color: transparent;
-    border: 2px solid #38bdf8;
-    color: white;
-}
-
-.btn-cv {
-    background-color: white;
-    color: #1e3a8a;
-    border: 2px solid white;
-}
-
-.btn-cv:hover {
-    background-color: #e0f2fe;
-    color: #1e3a8a;
-}
-
-
-/* =========================================================
-   À PROPOS
-   ========================================================= */
-
-#apropos {
-    background-color: white;
-}
-
-.about-container {
-    display: grid;
-    grid-template-columns: 1.2fr 1fr;
-    gap: 60px;
-    align-items: center;
-}
-
-.about-text h2 {
-    font-size: 38px;
-    margin-bottom: 25px;
-}
-
-.about-text p:not(.section-subtitle) {
-    font-size: 17px;
-    margin-bottom: 18px;
-    color: #475569;
-}
-
-#apropos p {
-    max-width: 800px;
-}
-
-.about-info {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-}
-
-.info-card {
-    background-color: #f8fafc;
-    padding: 25px;
-    border-radius: 12px;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
-    transition: 0.3s;
-}
-
-.info-card:hover {
-    transform: translateY(-5px);
-}
-
-.info-card span {
-    font-size: 30px;
-}
-
-.info-card h3 {
-    margin: 10px 0;
-    color: #0f172a;
-}
-
-.info-card p {
-    color: #64748b;
-}
-
-
-/* =========================================================
-   COMPÉTENCES
-   ========================================================= */
-
-#competences {
-    background-color: #f1f5f9;
-    text-align: center;
-}
-
-#competences .section-subtitle {
-    margin-bottom: 5px;
-}
-
-#competences h2 {
-    margin-bottom: 45px;
-}
-
-.skills-container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 25px;
-    max-width: 1000px;
-    margin: auto;
-}
-
-.skill-card {
-    background-color: white;
-    padding: 35px;
-    border-radius: 15px;
-    text-align: left;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
-    transition: 0.3s;
-}
-
-.skill-card:hover {
-    transform: translateY(-7px);
-}
-
-.skill-icon {
-    font-size: 40px;
-    margin-bottom: 15px;
-}
-
-.skill-card h3 {
-    font-size: 23px;
-    color: #0f172a;
-    margin-bottom: 20px;
-}
-
-.skill-card ul {
-    list-style: none;
-}
-
-.skill-card li {
-    margin-bottom: 12px;
-    color: #475569;
-    padding-left: 20px;
-    position: relative;
-}
-
-.skill-card li::before {
-    content: "✓";
-    position: absolute;
-    left: 0;
-    color: #2563eb;
-    font-weight: bold;
-}
-
-
-/* =========================================================
-   EXPÉRIENCE PROFESSIONNELLE
-   ========================================================= */
-
-#experience {
-    background-color: white;
-}
-
-#experience > .section-subtitle,
-#experience > h2 {
-    text-align: center;
-}
-
-.experience-card {
-    max-width: 1000px;
-    margin: 30px auto 0;
-    background-color: #f8fafc;
-    padding: 40px;
-    border-radius: 15px;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
-}
-
-.experience-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 20px;
-    margin-bottom: 25px;
-}
-
-.experience-header h3 {
-    font-size: 30px;
-    color: #1e3a8a;
-}
-
-.company {
-    color: #64748b;
-    margin-top: 5px;
-}
-
-.date {
-    background-color: #dbeafe;
-    color: #1e3a8a;
-    padding: 8px 15px;
-    border-radius: 20px;
-    font-weight: bold;
-    white-space: nowrap;
-}
-
-.experience-description {
-    color: #475569;
-    font-size: 17px;
-    margin-bottom: 30px;
-}
-
-.tasks {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-}
-
-.task {
-    display: flex;
-    gap: 15px;
-    background-color: white;
-    padding: 20px;
-    border-radius: 10px;
-    border: 1px solid #e2e8f0;
-}
-
-.task > span {
-    font-size: 28px;
-}
-
-.task h4 {
-    color: #0f172a;
-    margin-bottom: 5px;
-}
-
-.task p {
-    color: #64748b;
-    font-size: 15px;
-}
-
-
-/* =========================================================
-   PROJETS
-   ========================================================= */
-
-#projets {
-    background-color: #f1f5f9;
-    text-align: center;
-}
-
-#projets .section-subtitle {
-    margin-bottom: 5px;
-}
-
-#projets h2 {
-    margin-bottom: 45px;
-}
-
-.projects-container {
-    max-width: 1100px;
-    margin: auto;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 25px;
-}
-
-.project-card {
-    background-color: white;
-    border-radius: 15px;
-    overflow: hidden;
-    text-align: left;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
-    transition: 0.3s;
-}
-
-.project-card:hover {
-    transform: translateY(-8px);
-}
-
-.project-image {
-    height: 170px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: linear-gradient(
-        135deg,
-        #0f172a,
-        #1e3a8a
-    );
-    font-size: 60px;
-}
-
-.project-content {
-    padding: 25px;
-}
-
-.project-category {
-    color: #2563eb;
-    font-size: 13px;
-    font-weight: bold;
-    text-transform: uppercase;
-}
-
-.project-content h3 {
-    font-size: 22px;
-    margin: 12px 0;
-    color: #0f172a;
-}
-
-.project-content p {
-    color: #64748b;
-    font-size: 15px;
-    margin-bottom: 20px;
-}
-
-.technologies {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-}
-
-.technologies span {
-    background-color: #e0f2fe;
-    color: #0369a1;
-    padding: 5px 10px;
-    border-radius: 20px;
-    font-size: 12px;
-    font-weight: bold;
-}
-
-
-/* =========================================================
-   CERTIFICATIONS
-   ========================================================= */
-
-#certifications {
-    background-color: white;
-    text-align: center;
-}
-
-#certifications .section-subtitle {
-    margin-bottom: 5px;
-}
-
-#certifications h2 {
-    margin-bottom: 45px;
-}
-
-.certifications-container {
-    max-width: 900px;
-    margin: auto;
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 20px;
-}
-
-.certification-card {
-    display: flex;
-    align-items: center;
-    gap: 25px;
-    background-color: #f8fafc;
-    padding: 25px;
-    border-radius: 12px;
-    text-align: left;
-    border-left: 4px solid #2563eb;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
-    transition: 0.3s;
-}
-
-.certification-card:hover {
-    transform: translateX(6px);
-}
-
-.certification-icon {
-    width: 60px;
-    height: 60px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #dbeafe;
-    border-radius: 50%;
-    font-size: 28px;
-    flex-shrink: 0;
-}
-
-.certification-card h3 {
-    font-size: 21px;
-    color: #0f172a;
-    margin-bottom: 5px;
-}
-
-.certification-card p {
-    color: #475569;
-    margin-bottom: 5px;
-}
-
-.certification-card span {
-    color: #2563eb;
-    font-size: 14px;
-}
-
-
-/* =========================================================
-   CONTACT
-   ========================================================= */
-
-#contact {
-    background-color: #0f172a;
-    color: white;
-    text-align: center;
-}
-
-#contact .section-subtitle {
-    color: #38bdf8;
-}
-
-#contact h2 {
-    color: white;
-    margin-bottom: 20px;
-}
-
-.contact-intro {
-    max-width: 650px;
-    margin: 0 auto 40px;
-    color: #cbd5e1;
-    font-size: 17px;
-}
-
-.contact-container {
-    max-width: 1000px;
-    margin: 0 auto 40px;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
-}
-
-.contact-card {
-    background-color: #1e293b;
-    padding: 25px 15px;
-    border-radius: 12px;
-    transition: 0.3s;
-}
-
-.contact-card:hover {
-    transform: translateY(-5px);
-}
-
-.contact-icon {
-    font-size: 32px;
-    margin-bottom: 12px;
-}
-
-.contact-card h3 {
-    margin-bottom: 8px;
-}
-
-.contact-card p {
-    color: #cbd5e1;
-    font-size: 14px;
-}
-
-.contact-button {
-    margin-top: 10px;
-}
-
-
-/* =========================================================
-   PHOTO DE PROFIL
-   ========================================================= */
-
-.profile-photo {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 25px;
-}
-
-.profile-photo img {
-    width: 180px;
-    height: 180px;
-    object-fit: cover;
-    border-radius: 50%;
-    border: 4px solid white;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
-}
-
-
-/* =========================================================
-   RESPONSIVE - TABLETTE
-   ========================================================= */
-
-@media (max-width: 992px) {
-
-    header {
-        padding: 20px 30px;
-    }
-
-    section {
-        padding: 110px 7%;
-    }
-
-    .projects-container {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .contact-container {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-}
-
-
-/* =========================================================
-   RESPONSIVE - MOBILE
-   ========================================================= */
-
-@media (max-width: 768px) {
-
-    /* MENU */
-
-    header {
-        padding: 15px 20px;
-    }
-
-    nav {
-        flex-direction: column;
-        gap: 15px;
-    }
-
-    nav h2 {
-        font-size: 21px;
-    }
-
-    nav ul {
-        gap: 12px;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    nav ul li a {
-        font-size: 14px;
-    }
-
-
-    /* SECTIONS */
-
-    section {
-        padding: 110px 25px 60px;
-    }
-
-    section h2 {
-        font-size: 32px;
-    }
-
-
-    /* ACCUEIL */
-
-    #accueil h1 {
-        font-size: 38px;
-    }
-
-    #accueil h2 {
-        font-size: 22px;
-    }
-
-    #accueil p {
-        font-size: 17px;
-    }
-
-    .intro {
-        font-size: 18px;
-    }
-
-    .description {
-        font-size: 16px;
-    }
-
-
-    /* BOUTONS */
-
-    .buttons {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .btn {
-        width: 100%;
-        max-width: 280px;
-    }
-
-
-    /* À PROPOS */
-
-    .about-container {
-        grid-template-columns: 1fr;
-        gap: 35px;
-    }
-
-    .about-text h2 {
-        font-size: 32px;
-    }
-
-    .about-info {
-        grid-template-columns: 1fr;
-    }
-
-
-    /* COMPÉTENCES */
-
-    .skills-container {
-        grid-template-columns: 1fr;
-    }
-
-    .skill-card {
-        padding: 25px;
-    }
-
-
-    /* EXPÉRIENCE */
-
-    .experience-card {
-        padding: 25px;
-    }
-
-    .experience-header {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .experience-header h3 {
-        font-size: 25px;
-    }
-
-    .tasks {
-        grid-template-columns: 1fr;
-    }
-
-
-    /* PROJETS */
-
-    .projects-container {
-        grid-template-columns: 1fr;
-    }
-
-    .project-image {
-        height: 150px;
-    }
-
-
-    /* CERTIFICATIONS */
-
-    .certification-card {
-        padding: 20px;
-        gap: 15px;
-    }
-
-    .certification-icon {
-        width: 50px;
-        height: 50px;
-        font-size: 23px;
-    }
-
-    .certification-card h3 {
-        font-size: 18px;
-    }
-
-
-    /* CONTACT */
-
-    .contact-container {
-        grid-template-columns: 1fr;
-    }
-
-    .contact-card {
-        padding: 20px;
-    }
-
-
-    /* PHOTO */
-
-    .profile-photo img {
-        width: 150px;
-        height: 150px;
-    }
-}
-
-
-/* =========================================================
-   PETITS ÉCRANS
-   ========================================================= */
-
-@media (max-width: 480px) {
-
-    section {
-        padding-left: 18px;
-        padding-right: 18px;
-    }
-
-    #accueil h1 {
-        font-size: 32px;
-    }
-
-    #accueil h2 {
-        font-size: 20px;
-    }
-
-    section h2 {
-        font-size: 28px;
-    }
-
-    nav ul {
-        gap: 8px;
-    }
-
-    nav ul li a {
-        font-size: 13px;
-    }
-
-    .experience-card {
-        padding: 20px;
-    }
-
-    .task {
-        flex-direction: column;
-    }
-
-    .certification-card {
-        align-items: flex-start;
-    }
-}
+<```html
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Lina Ait Saidi | Portfolio</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ==================== MENU ==================== -->
+    <header>
+        <nav>
+            <h2>Lina Ait Saidi</h2>
+
+            <ul>
+                <li><a href="#accueil">Accueil</a></li>
+                <li><a href="#apropos">À propos</a></li>
+                <li><a href="#competences">Compétences</a></li>
+                <li><a href="#experience">Expérience</a></li>
+                <li><a href="#projets">Projets</a></li>
+                <li><a href="#certifications">Certifications</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <!-- ==================== ACCUEIL ==================== -->
+    <section id="accueil">
+
+        <div class="profile-photo">
+            <img src="photo-lina.jpg.jpg" alt="Lina Ait Saidi">
+        </div>
+
+        <p class="intro">Bonjour, je suis</p>
+
+        <h1>Lina Ait Saidi</h1>
+
+        <h2>Ingénieure en Réseaux & Télécommunications</h2>
+
+        <p class="description">
+            Passionnée par les réseaux informatiques, les systèmes,
+            l'administration IT et la cybersécurité.
+        </p>
+
+        <div class="buttons">
+
+            <a href="#projets" class="btn">
+                Voir mes projets
+            </a>
+
+            <a href="#contact" class="btn btn-outline">
+                Me contacter
+            </a>
+
+            <a href="CV LINA AIT SAIDI___.pdf" download class="btn btn-cv">
+                📄 Télécharger mon CV
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- ==================== À PROPOS ==================== -->
+    <section id="apropos">
+
+        <div class="about-container">
+
+            <div class="about-text">
+
+                <p class="section-subtitle">À PROPOS DE MOI</p>
+
+                <h2>Une ingénieure passionnée par les technologies</h2>
+
+                <p>
+                    Diplômée d'un Master 2 en Réseaux et Télécommunications,
+                    je développe mes compétences dans l'administration des
+                    systèmes et réseaux ainsi que dans le support informatique.
+                </p>
+
+                <p>
+                    Depuis mai 2026, j'occupe le poste d'Assistante IT,
+                    où je participe à la gestion des utilisateurs,
+                    au support informatique, à l'administration système
+                    et au diagnostic des problèmes réseau.
+                </p>
+
+                <p>
+                    Mon objectif est de continuer à développer mon expertise
+                    dans les domaines des réseaux, des systèmes informatiques
+                    et de la cybersécurité.
+                </p>
+
+            </div>
+
+
+            <div class="about-info">
+
+                <div class="info-card">
+                    <span>🎓</span>
+                    <h3>Formation</h3>
+                    <p>Master 2 Réseaux & Télécommunications</p>
+                </div>
+
+                <div class="info-card">
+                    <span>💼</span>
+                    <h3>Expérience</h3>
+                    <p>Assistante IT — depuis mai 2026</p>
+                </div>
+
+                <div class="info-card">
+                    <span>🌐</span>
+                    <h3>Domaine</h3>
+                    <p>Réseaux, Systèmes & IT</p>
+                </div>
+
+                <div class="info-card">
+                    <span>🔐</span>
+                    <h3>Intérêt</h3>
+                    <p>Cybersécurité</p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ==================== COMPÉTENCES ==================== -->
+    <section id="competences">
+
+        <p class="section-subtitle">MES COMPÉTENCES</p>
+
+        <h2>Compétences techniques</h2>
+
+        <div class="skills-container">
+
+            <!-- RÉSEAUX -->
+            <div class="skill-card">
+
+                <div class="skill-icon">🌐</div>
+
+                <h3>Réseaux</h3>
+
+                <ul>
+                    <li>Configuration des routeurs et switches</li>
+                    <li>VLAN et routage</li>
+                    <li>LAN / WAN</li>
+                    <li>Analyse et diagnostic réseau</li>
+                    <li>TCP/IP</li>
+                </ul>
+
+            </div>
+
+
+            <!-- SYSTÈMES -->
+            <div class="skill-card">
+
+                <div class="skill-icon">🖥️</div>
+
+                <h3>Systèmes & Administration</h3>
+
+                <ul>
+                    <li>Administration Active Directory</li>
+                    <li>Gestion des utilisateurs et des accès</li>
+                    <li>Linux</li>
+                    <li>Support informatique</li>
+                    <li>Diagnostic des incidents</li>
+                </ul>
+
+            </div>
+
+
+            <!-- OUTILS -->
+            <div class="skill-card">
+
+                <div class="skill-icon">🔧</div>
+
+                <h3>Outils IT</h3>
+
+                <ul>
+                    <li>Wireshark</li>
+                    <li>Advanced IP Scanner</li>
+                    <li>Packet Tracer</li>
+                    <li>Gestion et analyse réseau</li>
+                    <li>Outils de support IT</li>
+                </ul>
+
+            </div>
+
+
+            <!-- CYBERSÉCURITÉ -->
+            <div class="skill-card">
+
+                <div class="skill-icon">🔐</div>
+
+                <h3>Cybersécurité</h3>
+
+                <ul>
+                    <li>Sécurité des réseaux</li>
+                    <li>Contrôle des accès</li>
+                    <li>Principes de sécurité informatique</li>
+                    <li>Analyse des communications réseau</li>
+                    <li>Bonnes pratiques de sécurité</li>
+                </ul>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ==================== EXPÉRIENCE ==================== -->
+    <section id="experience">
+
+        <p class="section-subtitle">MON PARCOURS</p>
+
+        <h2>Expérience professionnelle</h2>
+
+        <div class="experience-card">
+
+            <div class="experience-header">
+
+                <div>
+                    <h3>Assistante IT</h3>
+                    <p class="company">
+                        Support Informatique & Administration IT
+                    </p>
+                </div>
+
+                <span class="date">Depuis mai 2026</span>
+
+            </div>
+
+
+            <p class="experience-description">
+                Participation à la gestion quotidienne du système informatique
+                et au support des utilisateurs, avec des interventions sur les
+                systèmes, les réseaux et les équipements informatiques.
+            </p>
+
+
+            <div class="tasks">
+
+                <div class="task">
+
+                    <span>🌐</span>
+
+                    <div>
+                        <h4>Administration réseau</h4>
+
+                        <p>
+                            Analyse et diagnostic du réseau, identification
+                            des équipements et résolution des incidents réseau.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="task">
+
+                    <span>👤</span>
+
+                    <div>
+                        <h4>Gestion des utilisateurs</h4>
+
+                        <p>
+                            Administration des comptes utilisateurs et des
+                            accès à travers Active Directory.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="task">
+
+                    <span>🖥️</span>
+
+                    <div>
+                        <h4>Support informatique</h4>
+
+                        <p>
+                            Assistance aux utilisateurs et résolution des
+                            problèmes liés aux postes informatiques et logiciels.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="task">
+
+                    <span>🔍</span>
+
+                    <div>
+                        <h4>Diagnostic & supervision</h4>
+
+                        <p>
+                            Utilisation d'outils tels que Wireshark et
+                            Advanced IP Scanner pour l'analyse et le diagnostic
+                            du réseau.
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ==================== PROJETS ==================== -->
+    <section id="projets">
+
+        <p class="section-subtitle">MES RÉALISATIONS</p>
+
+        <h2>Projets techniques</h2>
+
+        <div class="projects-container">
+
+            <!-- PROJET 1 -->
+            <div class="project-card">
+
+                <div class="project-image">
+                    🌐
+                </div>
+
+                <div class="project-content">
+
+                    <span class="project-category">
+                        Réseaux & Infrastructure
+                    </span>
+
+                    <h3>Infrastructure réseau d'entreprise</h3>
+
+                    <p>
+                        Conception et configuration d'une infrastructure
+                        réseau comprenant plusieurs VLAN, des switches,
+                        du routage inter-VLAN et une segmentation du réseau.
+                    </p>
+
+                    <div class="technologies">
+                        <span>VLAN</span>
+                        <span>Routing</span>
+                        <span>Switching</span>
+                        <span>Packet Tracer</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- PROJET 2 -->
+            <div class="project-card">
+
+                <div class="project-image">
+                    🔐
+                </div>
+
+                <div class="project-content">
+
+                    <span class="project-category">
+                        Sécurité réseau
+                    </span>
+
+                    <h3>Architecture réseau sécurisée avec pfSense</h3>
+
+                    <p>
+                        Mise en place d'une architecture réseau segmentée
+                        avec LAN, WAN et DMZ, incluant plusieurs VLAN et
+                        des règles de sécurité réseau.
+                    </p>
+
+                    <div class="technologies">
+                        <span>pfSense</span>
+                        <span>DMZ</span>
+                        <span>VLAN</span>
+                        <span>GNS3</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- PROJET 3 -->
+            <div class="project-card">
+
+                <div class="project-image">
+                    📊
+                </div>
+
+                <div class="project-content">
+
+                    <span class="project-category">
+                        Analyse réseau
+                    </span>
+
+                    <h3>Analyse et diagnostic du trafic réseau</h3>
+
+                    <p>
+                        Analyse des communications réseau et identification
+                        des équipements à l'aide d'outils de diagnostic
+                        et de capture de trafic.
+                    </p>
+
+                    <div class="technologies">
+                        <span>Wireshark</span>
+                        <span>TCP/IP</span>
+                        <span>Advanced IP Scanner</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ==================== CERTIFICATIONS ==================== -->
+    <section id="certifications">
+
+        <p class="section-subtitle">MES CERTIFICATIONS</p>
+
+        <h2>Certifications & Formations</h2>
+
+        <div class="certifications-container">
+
+            <!-- CERTIFICATION 1 -->
+            <div class="certification-card">
+
+                <div class="certification-icon">
+                    🎓
+                </div>
+
+                <div>
+                    <h3>Cisco Networking</h3>
+
+                    <p>
+                        Certification Cisco — Niveau 1
+                    </p>
+
+                    <span>
+                        Réseaux informatiques
+                    </span>
+                </div>
+
+            </div>
+
+
+            <!-- CERTIFICATION 2 -->
+            <div class="certification-card">
+
+                <div class="certification-icon">
+                    🎓
+                </div>
+
+                <div>
+                    <h3>Cisco Networking</h3>
+
+                    <p>
+                        Certification Cisco — Niveau 2
+                    </p>
+
+                    <span>
+                        Réseaux & Infrastructure
+                    </span>
+                </div>
+
+            </div>
+
+
+            <!-- FORMATION -->
+            <div class="certification-card">
+
+                <div class="certification-icon">
+                    🎓
+                </div>
+
+                <div>
+                    <h3>Master 2</h3>
+
+                    <p>
+                        Réseaux & Télécommunications
+                    </p>
+
+                    <span>
+                        Formation universitaire
+                    </span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ==================== CONTACT ==================== -->
+    <section id="contact">
+
+        <p class="section-subtitle">CONTACT</p>
+
+        <h2>Parlons de votre projet</h2>
+
+        <p class="contact-intro">
+            Vous avez une opportunité professionnelle ou souhaitez échanger
+            autour des réseaux, des systèmes ou de l'informatique ?
+            N'hésitez pas à me contacter.
+        </p>
+
+
+        <div class="contact-container">
+
+            <!-- EMAIL -->
+            <div class="contact-card">
+
+                <div class="contact-icon">
+                    📧
+                </div>
+
+                <h3>Email</h3>
+
+                <p>
+                    votre.email@example.com
+                </p>
+
+            </div>
+
+
+            <!-- TÉLÉPHONE -->
+            <div class="contact-card">
+
+                <div class="contact-icon">
+                    📱
+                </div>
+
+                <h3>Téléphone</h3>
+
+                <p>
+                    +213 XX XX XX XX
+                </p>
+
+            </div>
+
+
+            <!-- LINKEDIN -->
+            <div class="contact-card">
+
+                <div class="contact-icon">
+                    💼
+                </div>
+
+                <h3>LinkedIn</h3>
+
+                <p>
+                    Mon profil professionnel
+                </p>
+
+            </div>
+
+
+            <!-- LOCALISATION -->
+            <div class="contact-card">
+
+                <div class="contact-icon">
+                    📍
+                </div>
+
+                <h3>Localisation</h3>
+
+                <p>
+                    Béjaïa, Algérie
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <a href="mailto:votre.email@example.com" class="btn contact-button">
+            📩 M'envoyer un email
+        </a>
+
+    </section>
+
+
+    <!-- ==================== JAVASCRIPT ==================== -->
+    <script src="script.js"></script>
+
+</body>
+
+</html>
