@@ -1,6 +1,6 @@
-/* ============================= */
-/*        STYLE GÉNÉRAL          */
-/* ============================= */
+/* =========================================================
+   RESET & BASE
+   ========================================================= */
 
 * {
     margin: 0;
@@ -20,9 +20,9 @@ body {
 }
 
 
-/* ============================= */
-/*             MENU              */
-/* ============================= */
+/* =========================================================
+   MENU / NAVIGATION
+   ========================================================= */
 
 header {
     background-color: #0f172a;
@@ -62,9 +62,9 @@ nav ul li a:hover {
 }
 
 
-/* ============================= */
-/*           SECTIONS            */
-/* ============================= */
+/* =========================================================
+   SECTIONS
+   ========================================================= */
 
 section {
     min-height: 100vh;
@@ -74,16 +74,31 @@ section {
     justify-content: center;
 }
 
+section h2 {
+    font-size: 40px;
+    margin-bottom: 30px;
+    color: #0f172a;
+}
 
-/* ============================= */
-/*            ACCUEIL            */
-/* ============================= */
+.section-subtitle {
+    color: #2563eb;
+    font-weight: bold;
+    letter-spacing: 2px;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+
+/* =========================================================
+   ACCUEIL
+   ========================================================= */
 
 #accueil {
-    background: linear-gradient(135deg,
-            #0f172a,
-            #1e3a8a);
-
+    background: linear-gradient(
+        135deg,
+        #0f172a,
+        #1e3a8a
+    );
     color: white;
     text-align: center;
 }
@@ -116,6 +131,11 @@ section {
     color: #e2e8f0;
 }
 
+
+/* =========================================================
+   BOUTONS
+   ========================================================= */
+
 .buttons {
     display: flex;
     justify-content: center;
@@ -144,160 +164,31 @@ section {
     color: white;
 }
 
-/* ============================= */
-/*            TITRES             */
-/* ============================= */
+.btn-cv {
+    background-color: white;
+    color: #1e3a8a;
+    border: 2px solid white;
+}
 
-section h2 {
-    font-size: 40px;
-    margin-bottom: 30px;
-    color: #0f172a;
+.btn-cv:hover {
+    background-color: #e0f2fe;
+    color: #1e3a8a;
 }
 
 
-/* ============================= */
-/*          À PROPOS             */
-/* ============================= */
+/* =========================================================
+   À PROPOS
+   ========================================================= */
 
 #apropos {
     background-color: white;
 }
-
-#apropos p {
-    max-width: 800px;
-    font-size: 18px;
-}
-
-
-/* ============================= */
-/*         COMPÉTENCES           */
-/* ============================= */
-
-#competences {
-    background-color: #f1f5f9;
-}
-
-#competences p {
-    background-color: white;
-    padding: 15px 20px;
-    margin: 8px 0;
-    border-radius: 8px;
-    max-width: 600px;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
-}
-
-
-/* ============================= */
-/*          EXPÉRIENCE            */
-/* ============================= */
-
-#experience {
-    background-color: white;
-}
-
-#experience h3 {
-    font-size: 28px;
-    color: #1e3a8a;
-    margin-bottom: 10px;
-}
-
-#experience p {
-    max-width: 800px;
-    margin-bottom: 15px;
-}
-
-
-/* ============================= */
-/*            PROJETS             */
-/* ============================= */
-
-#projets {
-    background-color: #f1f5f9;
-}
-
-#projets p {
-    background-color: white;
-    padding: 15px;
-    margin: 8px 0;
-    max-width: 700px;
-    border-radius: 8px;
-}
-
-
-/* ============================= */
-/*            CONTACT             */
-/* ============================= */
-
-#contact {
-    background-color: #0f172a;
-    color: white;
-    text-align: center;
-}
-
-#contact h2 {
-    color: white;
-}
-
-#contact p {
-    font-size: 18px;
-}
-
-
-/* ============================= */
-/*       RESPONSIVE MOBILE       */
-/* ============================= */
-
-@media (max-width: 768px) {
-
-    header {
-        padding: 15px 20px;
-    }
-
-    nav {
-        flex-direction: column;
-        gap: 15px;
-    }
-
-    nav ul {
-        gap: 12px;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    section {
-        padding: 120px 25px 60px;
-    }
-
-    #accueil h1 {
-        font-size: 38px;
-    }
-
-    #accueil h2 {
-        font-size: 22px;
-    }
-
-    section h2 {
-        font-size: 32px;
-    }
-}
-
-/* ============================= */
-/*          À PROPOS             */
-/* ============================= */
 
 .about-container {
     display: grid;
     grid-template-columns: 1.2fr 1fr;
     gap: 60px;
     align-items: center;
-}
-
-.section-subtitle {
-    color: #2563eb;
-    font-weight: bold;
-    letter-spacing: 2px;
-    font-size: 14px;
-    margin-bottom: 10px;
 }
 
 .about-text h2 {
@@ -309,6 +200,10 @@ section h2 {
     font-size: 17px;
     margin-bottom: 18px;
     color: #475569;
+}
+
+#apropos p {
+    max-width: 800px;
 }
 
 .about-info {
@@ -342,9 +237,10 @@ section h2 {
     color: #64748b;
 }
 
-/* ============================= */
-/*          COMPÉTENCES          */
-/* ============================= */
+
+/* =========================================================
+   COMPÉTENCES
+   ========================================================= */
 
 #competences {
     background-color: #f1f5f9;
@@ -409,158 +305,11 @@ section h2 {
     color: #2563eb;
     font-weight: bold;
 }
-/* ============================= */
-/*       VERSION MOBILE          */
-/* ============================= */
 
-@media (max-width: 768px) {
-    .contact-container {
-        grid-template-columns: 1fr 1fr;
-    }
-    .projects-container {
-        grid-template-columns: 1fr;
-    }
-    .experience-header {
-        flex-direction: column;
-        align-items: flex-start;
-    }
 
-    .tasks {
-        grid-template-columns: 1fr;
-    }
-
-    .experience-card {
-        padding: 25px;
-    }
-
-    .skills-container {
-        grid-template-columns: 1fr;
-    }
-
-    .about-container {
-        grid-template-columns: 1fr;
-    }
-
-    .about-info {
-        grid-template-columns: 1fr;
-    }
-
-    .buttons {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    nav {
-        flex-direction: column;
-        gap: 15px;
-    }
-
-    nav ul {
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-}
-/* ============================= */
-/*            PROJETS             */
-/* ============================= */
-
-#projets {
-    background-color: #f1f5f9;
-    text-align: center;
-}
-
-#projets .section-subtitle {
-    margin-bottom: 5px;
-}
-
-#projets h2 {
-    margin-bottom: 45px;
-}
-
-.projects-container {
-    max-width: 1100px;
-    margin: auto;
-
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 25px;
-}
-
-.project-card {
-    background-color: white;
-    border-radius: 15px;
-    overflow: hidden;
-    text-align: left;
-
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
-
-    transition: 0.3s;
-}
-
-.project-card:hover {
-    transform: translateY(-8px);
-}
-
-.project-image {
-    height: 170px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    background: linear-gradient(
-        135deg,
-        #0f172a,
-        #1e3a8a
-    );
-
-    font-size: 60px;
-}
-
-.project-content {
-    padding: 25px;
-}
-
-.project-category {
-    color: #2563eb;
-    font-size: 13px;
-    font-weight: bold;
-    text-transform: uppercase;
-}
-
-.project-content h3 {
-    font-size: 22px;
-    margin: 12px 0;
-    color: #0f172a;
-}
-
-.project-content p {
-    color: #64748b;
-    font-size: 15px;
-    margin-bottom: 20px;
-}
-
-.technologies {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-}
-
-.technologies span {
-    background-color: #e0f2fe;
-    color: #0369a1;
-
-    padding: 5px 10px;
-
-    border-radius: 20px;
-
-    font-size: 12px;
-    font-weight: bold;
-}
-/* ============================= */
-/*         EXPÉRIENCE            */
-/* ============================= */
+/* =========================================================
+   EXPÉRIENCE PROFESSIONNELLE
+   ========================================================= */
 
 #experience {
     background-color: white;
@@ -641,9 +390,101 @@ section h2 {
     color: #64748b;
     font-size: 15px;
 }
-/* ============================= */
-/*        CERTIFICATIONS         */
-/* ============================= */
+
+
+/* =========================================================
+   PROJETS
+   ========================================================= */
+
+#projets {
+    background-color: #f1f5f9;
+    text-align: center;
+}
+
+#projets .section-subtitle {
+    margin-bottom: 5px;
+}
+
+#projets h2 {
+    margin-bottom: 45px;
+}
+
+.projects-container {
+    max-width: 1100px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.project-card {
+    background-color: white;
+    border-radius: 15px;
+    overflow: hidden;
+    text-align: left;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    transition: 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-8px);
+}
+
+.project-image {
+    height: 170px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(
+        135deg,
+        #0f172a,
+        #1e3a8a
+    );
+    font-size: 60px;
+}
+
+.project-content {
+    padding: 25px;
+}
+
+.project-category {
+    color: #2563eb;
+    font-size: 13px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.project-content h3 {
+    font-size: 22px;
+    margin: 12px 0;
+    color: #0f172a;
+}
+
+.project-content p {
+    color: #64748b;
+    font-size: 15px;
+    margin-bottom: 20px;
+}
+
+.technologies {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.technologies span {
+    background-color: #e0f2fe;
+    color: #0369a1;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+
+/* =========================================================
+   CERTIFICATIONS
+   ========================================================= */
 
 #certifications {
     background-color: white;
@@ -661,7 +502,6 @@ section h2 {
 .certifications-container {
     max-width: 900px;
     margin: auto;
-
     display: grid;
     grid-template-columns: 1fr;
     gap: 20px;
@@ -671,19 +511,12 @@ section h2 {
     display: flex;
     align-items: center;
     gap: 25px;
-
     background-color: #f8fafc;
-
     padding: 25px;
-
     border-radius: 12px;
-
     text-align: left;
-
     border-left: 4px solid #2563eb;
-
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
-
     transition: 0.3s;
 }
 
@@ -694,17 +527,12 @@ section h2 {
 .certification-icon {
     width: 60px;
     height: 60px;
-
     display: flex;
     align-items: center;
     justify-content: center;
-
     background-color: #dbeafe;
-
     border-radius: 50%;
-
     font-size: 28px;
-
     flex-shrink: 0;
 }
 
@@ -723,9 +551,11 @@ section h2 {
     color: #2563eb;
     font-size: 14px;
 }
-/* ============================= */
-/*            CONTACT            */
-/* ============================= */
+
+
+/* =========================================================
+   CONTACT
+   ========================================================= */
 
 #contact {
     background-color: #0f172a;
@@ -752,7 +582,6 @@ section h2 {
 .contact-container {
     max-width: 1000px;
     margin: 0 auto 40px;
-
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 20px;
@@ -762,7 +591,6 @@ section h2 {
     background-color: #1e293b;
     padding: 25px 15px;
     border-radius: 12px;
-
     transition: 0.3s;
 }
 
@@ -787,19 +615,11 @@ section h2 {
 .contact-button {
     margin-top: 10px;
 }
-/* Bouton Télécharger mon CV */
 
-.btn-cv {
-    background-color: white;
-    color: #1e3a8a;
-    border: 2px solid white;
-}
 
-.btn-cv:hover {
-    background-color: #e0f2fe;
-    color: #1e3a8a;
-}
-/* Photo de profil */
+/* =========================================================
+   PHOTO DE PROFIL
+   ========================================================= */
 
 .profile-photo {
     display: flex;
@@ -814,4 +634,249 @@ section h2 {
     border-radius: 50%;
     border: 4px solid white;
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+
+/* =========================================================
+   RESPONSIVE - TABLETTE
+   ========================================================= */
+
+@media (max-width: 992px) {
+
+    header {
+        padding: 20px 30px;
+    }
+
+    section {
+        padding: 110px 7%;
+    }
+
+    .projects-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .contact-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE - MOBILE
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+    /* MENU */
+
+    header {
+        padding: 15px 20px;
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav h2 {
+        font-size: 21px;
+    }
+
+    nav ul {
+        gap: 12px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    nav ul li a {
+        font-size: 14px;
+    }
+
+
+    /* SECTIONS */
+
+    section {
+        padding: 110px 25px 60px;
+    }
+
+    section h2 {
+        font-size: 32px;
+    }
+
+
+    /* ACCUEIL */
+
+    #accueil h1 {
+        font-size: 38px;
+    }
+
+    #accueil h2 {
+        font-size: 22px;
+    }
+
+    #accueil p {
+        font-size: 17px;
+    }
+
+    .intro {
+        font-size: 18px;
+    }
+
+    .description {
+        font-size: 16px;
+    }
+
+
+    /* BOUTONS */
+
+    .buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .btn {
+        width: 100%;
+        max-width: 280px;
+    }
+
+
+    /* À PROPOS */
+
+    .about-container {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .about-text h2 {
+        font-size: 32px;
+    }
+
+    .about-info {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* COMPÉTENCES */
+
+    .skills-container {
+        grid-template-columns: 1fr;
+    }
+
+    .skill-card {
+        padding: 25px;
+    }
+
+
+    /* EXPÉRIENCE */
+
+    .experience-card {
+        padding: 25px;
+    }
+
+    .experience-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .experience-header h3 {
+        font-size: 25px;
+    }
+
+    .tasks {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* PROJETS */
+
+    .projects-container {
+        grid-template-columns: 1fr;
+    }
+
+    .project-image {
+        height: 150px;
+    }
+
+
+    /* CERTIFICATIONS */
+
+    .certification-card {
+        padding: 20px;
+        gap: 15px;
+    }
+
+    .certification-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 23px;
+    }
+
+    .certification-card h3 {
+        font-size: 18px;
+    }
+
+
+    /* CONTACT */
+
+    .contact-container {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-card {
+        padding: 20px;
+    }
+
+
+    /* PHOTO */
+
+    .profile-photo img {
+        width: 150px;
+        height: 150px;
+    }
+}
+
+
+/* =========================================================
+   PETITS ÉCRANS
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+    section {
+        padding-left: 18px;
+        padding-right: 18px;
+    }
+
+    #accueil h1 {
+        font-size: 32px;
+    }
+
+    #accueil h2 {
+        font-size: 20px;
+    }
+
+    section h2 {
+        font-size: 28px;
+    }
+
+    nav ul {
+        gap: 8px;
+    }
+
+    nav ul li a {
+        font-size: 13px;
+    }
+
+    .experience-card {
+        padding: 20px;
+    }
+
+    .task {
+        flex-direction: column;
+    }
+
+    .certification-card {
+        align-items: flex-start;
+    }
 }
